@@ -1,5 +1,16 @@
 import Link from "next/link";
 import DashboardLayout from "@/components/DashboardLayout";
+
+export function generateStaticParams() {
+  return [
+    { id: "ORD-001" },
+    { id: "ORD-002" },
+    { id: "ORD-003" },
+    { id: "ORD-004" },
+    { id: "ORD-005" },
+  ];
+}
+
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import StatusBadge from "@/components/StatusBadge";
 import { formatIDR } from "@/lib/utils";

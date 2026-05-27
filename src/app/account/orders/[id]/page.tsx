@@ -1,6 +1,17 @@
 "use client";
 
 import Link from "next/link";
+
+export function generateStaticParams() {
+  return [
+    { id: "ORD-001" },
+    { id: "ORD-002" },
+    { id: "ORD-003" },
+    { id: "ORD-004" },
+    { id: "ORD-005" },
+  ];
+}
+
 import { motion } from "framer-motion";
 import AccountLayout from "@/components/AccountLayout";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
