@@ -17,10 +17,11 @@ export default function ImagePlaceholder({
   alt = "",
 }: ImagePlaceholderProps) {
   if (src) {
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
     return (
       <div className={cn("relative overflow-hidden", className)}>
         <Image
-          src={src}
+          src={`${base}${src}`}
           alt={alt}
           fill
           className="object-cover"
