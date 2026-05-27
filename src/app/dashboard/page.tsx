@@ -15,9 +15,9 @@ const monthlyRevenue = [
 const maxValue = 12450000;
 
 const topProducts = [
-  { name: "Linen Midi Dress", sales: 45, revenue: 20250000 },
-  { name: "Tencel Slip Dress", sales: 38, revenue: 18620000 },
-  { name: "Embroidered Kaftan", sales: 29, revenue: 15080000 },
+  { name: "Linen Midi Dress", sales: 45, revenue: 20250000, image: "/images/ig-14.jpg" },
+  { name: "Tencel Slip Dress", sales: 38, revenue: 18620000, image: "/images/ig-10.jpg" },
+  { name: "Embroidered Kaftan", sales: 29, revenue: 15080000, image: "/images/ig-16.jpg" },
 ];
 
 export default function DashboardOverviewPage() {
@@ -72,7 +72,7 @@ export default function DashboardOverviewPage() {
             <div className="space-y-4">
               {topProducts.map((p, i) => (
                 <div key={p.name} className="flex items-center gap-3">
-                  <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} />
+                  <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} src={p.image} alt={p.name} />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-[#1A1A1A] truncate">{p.name}</p>
                     <p className="text-xs text-[#6B6560]">{p.sales} sales</p>

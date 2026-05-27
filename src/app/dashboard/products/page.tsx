@@ -63,7 +63,7 @@ export default function DashboardProductsPage() {
                     </td>
                     <td className="px-4 py-3 max-w-[200px]">
                       <div className="flex items-center gap-3 min-w-0">
-                        <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} />
+                        <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} src={product.image} alt={product.name} />
                         <span className="font-medium text-[#1A1A1A] truncate">{product.name}</span>
                       </div>
                     </td>

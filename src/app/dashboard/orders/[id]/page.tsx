@@ -16,8 +16,8 @@ import StatusBadge from "@/components/StatusBadge";
 import { formatIDR } from "@/lib/utils";
 
 const orderItems = [
-  { name: "Linen Midi Dress", size: "S", qty: 1, price: 450000 },
-  { name: "Gauze Wrap Blouse", size: "M", qty: 1, price: 320000 },
+  { name: "Linen Midi Dress", size: "S", qty: 1, price: 450000, image: "/images/ig-14.jpg" },
+  { name: "Gauze Wrap Blouse", size: "M", qty: 1, price: 320000, image: "/images/ig-18.jpg" },
 ];
 const subtotal = 770000;
 
@@ -82,7 +82,7 @@ export default function DashboardOrderDetailPage() {
                       <tr key={i} className="border-b border-[#E8E4DF] last:border-0">
                         <td className="px-5 py-3">
                           <div className="flex items-center gap-3">
-                            <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} />
+                            <ImagePlaceholder className="w-10 h-10 flex-shrink-0" index={i} src={item.image} alt={item.name} />
                             <span className="font-medium text-[#1A1A1A]">{item.name}</span>
                           </div>
                         </td>
